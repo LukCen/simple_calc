@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kurs</title>
+</head>
+<body>
+    <header>Kalkulator BMI</header>
+    <h1>Prosty kalkulator wyliczający wartość BMI z Twojego wzrostu i wagi.</h1>
+    <form oninput="result.value = parseInt(bodyweight.value) / (parseFloat(bodyheight.value)*parseFloat(bodyheight.value))">
+        <input name="bodyheight" required placeholder="Wzrost w metrach" class="numfield" pattern="^[0-9.]{1-3}$" type="number"> Wpisz swój wzrost, użyj kropki jako separatora (metry.centymetry) <br>
+        <input name="bodyweight" required placeholder="Waga w kilogramach" class="numfield" type="number"> Wpisz swoją wagę (kg) <br>
+        <hr>
+        <output id="result">Wynik :</output>
+
+    </form>
+    <script src="js/script.js"></script>
+</body>
+</html>
